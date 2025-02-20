@@ -1,8 +1,18 @@
-# "Child" if age is less than 12.
-
-# "Teenager" if age is between 12 and 18.
-
-# "Adult" if age is above 18.
-age=int(input("Enter your age: "))
-print("Child" if age<12 else "Teenager" if age>=12 and age<=18 else "Adult")
-print("Child" if age<12 else "Teenager" if age>=12 and age<=18 else "Adult")    
+operators = ['+', '-', '*', '/']
+expression = input("Enter an expression ") 
+for operator in operators:
+    if operator in expression:
+        num1, num2 = expression.split(operator)
+        num1, num2 = float(num1), float(num2)
+        
+        if operator == '+':
+            result = num1 + num2
+        elif operator == '-':
+            result = num1 - num2
+        elif operator == '*':
+            result = num1 * num2
+        elif operator == '/':
+            result = num1 / num2
+        
+        print(f"Result: {result}")
+        break
